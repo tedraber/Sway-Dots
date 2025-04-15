@@ -21,7 +21,7 @@ rm -rf ~/.config/fastfetch ~/.config/fish ~/.config/foot ~/.config/sway ~/.confi
 # Move new configs
 echo "Applying new configurations..."
 cp -rf ~/Sway-Dots/.config/* ~/.config/
-
+mkdir ~/Pictures/Screenshots
 # Completion message
 echo "done."
 
