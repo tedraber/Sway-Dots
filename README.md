@@ -2,7 +2,7 @@
 My new Sway dotfiles I put together
 ![433667228-94001e28-70f9-430f-a5de-1d1d037c29f1](https://github.com/user-attachments/assets/f787d6b4-8a87-4a71-acb7-9b33b2b86867)
 ![433668248-ec613360-a99b-41f9-9ca6-6364483ef4f5](https://github.com/user-attachments/assets/9ff6cd50-535a-4b4b-a577-e126be977bd6)
-![screenshot_2025-04-15_17-14-07](https://github.com/user-attachments/assets/97119b49-dd54-4805-b916-833c90c6d22a)
+![screenshot_2025-04-15_17-14-07](https://github.com/user-attachments/assets/5844ee5e-703a-4c60-a1b5-f3382b761e31)
 ## How to install:
 ```
   git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
