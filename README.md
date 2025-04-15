@@ -1,5 +1,6 @@
 # Sway-Dots
 My new Sway dotfiles I put together
+
 If you want to install, copy all the files to ~/.config/ , unless im missremembering because its 1:07, all the files given are all the applications needed
 
 ![433667228-94001e28-70f9-430f-a5de-1d1d037c29f1](https://github.com/user-attachments/assets/f787d6b4-8a87-4a71-acb7-9b33b2b86867)
