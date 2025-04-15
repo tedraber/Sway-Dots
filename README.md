@@ -1,5 +1,5 @@
 # Sway-Dots
-My new Sway dotfiles
+My new Sway dotfiles I put together
 ![image](https://github.com/user-attachments/assets/94001e28-70f9-430f-a5de-1d1d037c29f1)
 ![image](https://github.com/user-attachments/assets/ec613360-a99b-41f9-9ca6-6364483ef4f5)
 Lots of thanks to the RosePine theme :)) **https://rosepinetheme.com/**
