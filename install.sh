@@ -2,7 +2,7 @@
 
 # Install packages with paru
 echo "Installing needed packages..."
-paru -S --needed  fastfetch foot sway waybar swaylock swaync wofi yazi rose-pine-gtk-theme-full thunar grimshot nwg-look
+paru -S --needed  fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi rose-pine-gtk-theme-full thunar grimshot nwg-look
 
 # Configure GTK theme
 echo "Setting Rose Pine GTK theme..."
