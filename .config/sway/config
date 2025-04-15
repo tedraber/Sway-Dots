@@ -184,7 +184,7 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 bindsym --locked $mod+Shift+Prior exec playerctl previous
 
 bindsym Print exec grimshot copy area
-bindsym $Mod+Print exec grimshot save area
+bindsym $mod+Print exec grimshot save area
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
