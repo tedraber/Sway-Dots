@@ -6,7 +6,7 @@ My new Sway dotfiles I put together
 ## How to install:
 ```
   git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
-  chmod +x install.sh & ./install.sh
+  chmod +x install.sh && ./install.sh
 ```
 ### OR do it manually
 ```
