@@ -183,11 +183,8 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 ## Modify // Play Previous // <> <Shift> Previous ##
 bindsym --locked $mod+Shift+Prior exec playerctl previous
 
-bindsym --locked Print exec /usr/share/sway/scripts/grimshot --notify save output - | swappy -f - & SLIGHT=$(light -G) && light -A 30 && sleep 0.1 && light -S $SLIGHT
-
-bindsym $mod+Print exec save active - | swappy -f - & SLIGHT=$(light -G) && light -A 30 && sleep 0.1 && light -S $SLIGHT
-
-bindsym $mod+Shift+P exec grimshot copy area
+bindsym Print exec grimshot copy area
+bindsym $Mod+Print exec grimshot save area
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
