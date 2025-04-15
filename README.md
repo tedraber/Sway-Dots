@@ -9,6 +9,10 @@ How to install:
   
   chmod +x install.sh & ./install.sh
 
+
+
+
+**Credits**
 Lots of thanks to the RosePine theme, using the waybar, and swaync theme :)) **https://rosepinetheme.com/**
 
 Thank you madic-creates for dotfiles to follow **https://github.com/madic-creates/Sway-DE.git** 
