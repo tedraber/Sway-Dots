@@ -6,6 +6,7 @@ My new Sway dotfiles I put together
 How to install:
   
   git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots
+  
   chmod +x install.sh & ./install.sh
 
 Lots of thanks to the RosePine theme, using the waybar, and swaync theme :)) **https://rosepinetheme.com/**
