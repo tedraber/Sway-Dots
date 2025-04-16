@@ -4,11 +4,6 @@ My new Sway dotfiles I put together
 ![image](https://github.com/user-attachments/assets/f6f81424-3e75-4e1d-ad4f-2e4d52899d1d)
 ![screenshot_2025-04-15_17-19-28](https://github.com/user-attachments/assets/fd8579b8-b6d9-46b3-a25c-d6d5d7920e78)
 ## How to install:
-Install through curl
-``` 
-fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install-online.sh | fish"
-```
-OR Install through git
 ``` 
 git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
 chmod +x install-local.sh && ./install-local.sh
