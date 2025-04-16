@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 # Install packages with paru
 echo "Installing needed packages..."
+paru -Rns power-profiles-daemon --noconfirm 
 paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi
 
 # Try to detect an active display manager by checking systemd services
