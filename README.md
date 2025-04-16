@@ -13,6 +13,8 @@ My new Sway dotfiles I put together
 git clone https://github.com/linuxnoob235/Sway-Dots.git
 paru (or yay) -S --needed  fastfetch foot sway waybar swaylock wofi yazi rose-pine-gtk-theme-full thunar zen-browser grimshot nwg-look imv pipewire pipewire-pulse wireplumber
 
+//Set up PieWire
+systemctl --user enable pipewire pipewire-pulse wireplumber
 //Set GTK theme
 gsettings set org.gnome.desktop.interface gtk-theme 'rose-pine-moon-gtk'
 gsettings set org.gnome.desktop.interface icon-theme 'oomox-rose-pine-moon'
