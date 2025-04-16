@@ -2,7 +2,10 @@
 
 # Install packages with paru
 echo "Installing needed packages..."
-paru -S --needed  fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi rose-pine-gtk-theme-full thunar grimshot nwg-look imv
+paru -S --needed  fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi rose-pine-gtk-theme-full thunar zen-browser grimshot nwg-look imv pipewire pipewire-pulse wireplumber
+
+echo "Settings up Audio..."
+systemctl --user enable pipewire pipewire-pulse wireplumber
 
 # Configure GTK theme
 echo "Setting Rose Pine GTK theme..."
