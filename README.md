@@ -4,7 +4,7 @@ My new Sway dotfiles I put together
 ![image](https://github.com/user-attachments/assets/f6f81424-3e75-4e1d-ad4f-2e4d52899d1d)
 ![screenshot_2025-04-15_17-19-28](https://github.com/user-attachments/assets/fd8579b8-b6d9-46b3-a25c-d6d5d7920e78)
 ## How to install:
-Install through curl
+Install through curl (recommended)
 ``` 
 fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install-online.sh | fish"
 ```
@@ -16,7 +16,8 @@ chmod +x install-local.sh && ./install-local.sh
 ### OR do it manually
 ```
 git clone https://github.com/linuxnoob235/Sway-Dots.git
-paru (or yay) -S --needed  fastfetch foot sway waybar swaylock wofi yazi rose-pine-gtk-theme-full thunar zen-browser grimshot nwg-look imv pipewire pipewire-pulse wireplumber
+paru -Rns power-profiles-daemon 
+paru -S --needed fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly
 
 //Set up PieWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
