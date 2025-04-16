@@ -57,7 +57,8 @@ exec_always {
   bindsym $mod+Return exec foot
   bindsym $mod+n exec swaync-client -t -sw
   bindsym $mod+g exec pavucontrol
-  bindsym $mod+End sway exit
+  bindsym $mod+End sway exitd+
+  bindsym $mod+u exec tlpui
 
   #####
   # Window and Workspace Navigation
@@ -298,7 +299,7 @@ for_window [app_id = "avizo-service"] border pixel 0, sticky toggle
 no_focus [app_id="avizo-service"]
 for_window [window_role = "GtkFileChooserDialog"] resize set 590 340
 for_window [window_role = "GtkFiileChooserDialog"] move position center
-for_window [app_id = "tlp-ui"] floating enable
+for_window [app_id = "tlpui"] floating enable
 for_window [title = "mpvfloat"] floating enable
 for_window [title = ".*Kee - Mozilla Firefox"] floating enable
 for_window [app_id = "nm-openconnect-auth-dialog"] floating enable
@@ -311,7 +312,6 @@ for_window [app_id="(?i)Thunderbird" title=".*Reminder"] floating enable
 for_window [class = "ATLauncher"] floating enable
 for_window [app_id="pamac-manager"] floating enable
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
-for_window [title="nmtui"] floating enable
 for_window [title="Save File"] floating enable
 for_window [app_id="wdisplays"] floating enable
 for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
