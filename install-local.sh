@@ -25,21 +25,15 @@ else
 end
 
 # Install extra packages
-while true
-    read -lP "Do you want to install extra files (recommended)? (y/n): " answer
-    set answer (string lower $answer)
-    
-    if test "$answer" = "y"
-        echo "Installing files..."
-        paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt
-        break
-    else if test "$answer" = "n"
-        echo "Skipping installation."
-        break
-    else
-        echo "Invalid input. Please answer y or n."
-    end
-end
+echo "installing extra"
+paru -S --needed --noconfirm --overwrite vesktop
+paru -S --needed --noconfirm --overwrite zen-browser
+paru -S --needed --noconfirm --overwrite prismlauncher
+paru -S --needed --noconfirm --overwrite btop
+paru -S --needed --noconfirm --overwrite adwsteamgtk
+paru -S --needed --noconfirm --overwrite steam
+paru -S --needed --noconfirm --overwrite sober
+paru -S --needed --noconfirm --overwrite protonup-qt
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
