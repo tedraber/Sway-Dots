@@ -36,7 +36,7 @@ exec waybar
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user start sway-session.target
-exec_always /home/$USER/.config/sway/background.sh
+exec_always oguri
 exec_always { 
   gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-moon-gtk"
   gsettings set org.gnome.desktop.interface icon-theme "rose-pine-moon-icons"
