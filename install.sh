@@ -6,28 +6,33 @@ paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock sway
 echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
 
-# Check for current display manager and switch to Ly if needed
-if test -d /etc/systemd/system/display-manager.service
-    set current_dm (basename (readlink /etc/systemd/system/display-manager.service))
-    echo "Current display manager: $current_dm"
-    
-    if test "$current_dm" != "ly.service"
-        echo "Switching to Ly display manager..."
-        
-        # Disable current DM
-        sudo systemctl disable $current_dm --now
-        
-        # Enable Ly
-        sudo systemctl enable ly --now
-        
-        echo "Ly has been enabled as the display manager."
+
+# Detect current display manager
+set dm (loginctl show-session (loginctl | grep $(whoami) | awk '{print $1}') -p Type | cut -d= -f2)
+
+# If a DM exists and is not 'ly', switch to 'ly'
+if test -n "$dm"
+    if test "$dm" != "tty"
+        echo "Detected Display Manager: $dm"
+
+        if test "$dm" != "ly"
+            echo "Switching to ly..."
+            sudo systemctl disable $dm
+            sudo systemctl enable ly
+            sudo systemctl set-default graphical.target
+            echo "Ly has been enabled. Please reboot."
+        else
+            echo "Ly is already set as the display manager."
+        end
     else
-        echo "Ly is already the display manager. No changes needed."
+        echo "No graphical display manager is active (TTY detected). Enabling ly..."
+        sudo systemctl enable ly
+        sudo systemctl set-default graphical.target
     end
 else
-    echo "No display manager detected. Enabling Ly..."
-    sudo systemctl enable ly --now
-    echo "Ly has been enabled as the display manager."
+    echo "No display manager detected. Enabling ly..."
+    sudo systemctl enable ly
+    sudo systemctl set-default graphical.target
 end
 
 # Install extra packages
