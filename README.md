@@ -6,12 +6,12 @@ My new Sway dotfiles I put together
 ## How to install:
 Install through curl
 ``` 
-fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install.sh | fish"
+fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install-online.sh | fish"
 ```
 OR Install through git
 ``` 
 git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
-chmod +x install.sh && ./install.sh
+chmod +x install-local.sh && ./install-local.sh
 ```
 ### OR do it manually
 ```
