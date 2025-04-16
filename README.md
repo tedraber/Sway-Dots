@@ -10,8 +10,8 @@ fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/mai
 ```
 OR Install through git
 ``` 
-  git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
-  chmod +x install.sh && ./install.sh
+git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
+chmod +x install.sh && ./install.sh
 ```
 ### OR do it manually
 ```
