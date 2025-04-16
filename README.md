@@ -6,7 +6,7 @@ My new Sway dotfiles I put together
 ## How to install:
 Install through curl
 ``` 
-fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnob235/main/install.sh | fish"
+fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install.sh | fish"
 ```
 OR Install through git
 ``` 
