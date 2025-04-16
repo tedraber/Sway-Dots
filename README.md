@@ -26,9 +26,10 @@ git clone https://github.com/d218nis/rose-pine-swaylock.git ~/.local/share/theme
 //Remove existing config
 rm -rf ~/.config/fastfetch ~/.config/fish ~/.config/foot ~/.config/sway ~/.config/swaync ~/.config/waybar ~/.config/wofi ~/.config/yazi
 
-//Copy files from Sway-Dots to .config
+//Copy config files
 cp -rf ~/Sway-Dots/.config/* ~/.config/
-
+mkdir ~/Pictures/Wallpapers/  ## if neccessary
+cp -f ~/Sway-Dots/Wallpapers/* ~/Pictures/Wallpapers/ 
 Then reboot your system
 ```
 you may have to then get a Rose Pine theme for KDE if you use and QT applications
