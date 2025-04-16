@@ -53,9 +53,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 # Clone swaylock theme
 echo "Copying swaylock theme..."
-mkdir -p ~/.local/share/themes/rose-pine
-git clone https://github.com/d218nis/rose-pine-swaylock.git /home/$USER/.local/share/themes/rose-pine/swaylock
-
+git clone https://github.com/d2718nis/rose-pine-swaylock.git ~/.local/share/themes/rose-pine/swaylock
 # Clean existing configs
 echo "Cleaning old configurations..."
 rm -rf /home/$USER/.config/fastfetch /home/$USER/.config/fish /home/$USER/.config/foot /home/$USER/.config/sway /home/$USER/.config/swaync /home/$USER/.config/waybar /home/$USER/.config/wofi /home/$USER/.config/yazi 
