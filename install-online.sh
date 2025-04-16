@@ -1,7 +1,7 @@
 #!/usr/bin/fish
 # Install packages with paru
 echo "Installing needed packages..."
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlpui xorg-xwayland fish ly
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlpui xorg-xwayland ly
 
 echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
@@ -29,7 +29,15 @@ end
 
 # Install extra packages (auto-install without prompt)
 echo "Installing recommended extra files..."
-paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt bibata-cursor-theme-bin
+paru -S --needed --noconfirm --overwrite vesktop
+paru -S --needed --noconfirm --overwrite zen-browser
+paru -S --needed --noconfirm --overwrite prismlauncher
+paru -S --needed --noconfirm --overwrite btop
+paru -S --needed --noconfirm --overwrite adwsteamgtk
+paru -S --needed --noconfirm --overwrite steam
+paru -S --needed --noconfirm --overwrite sober
+paru -S --needed --noconfirm --overwrite protonup-qt
+paru -S bibata-cursor-theme-bin
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
