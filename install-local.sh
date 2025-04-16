@@ -66,7 +66,6 @@ cp -rv /home/$USER/Sway-Dots/.config/* /home/$USER/.config/
 mkdir -p /home/$USER/Pictures/Screenshots
 mv /home/$USER/Sway-Dots/bay.PNG /home/$USER/Pictures/Screenshots/
 chmod +x /home/$USER/.config/waybar/scripts/battery_switch.sh
-chmod +x /home/$USER/.config/sway/background.sh
 
 # Completion message
 echo "Done."
