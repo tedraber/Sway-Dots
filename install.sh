@@ -7,7 +7,7 @@ echo "do you
 git clone https://github.com/linuxnoob235/Sway-Dots/install.sh
 
 #install extra packages
-read -lP "Would you like to install extra packages (steam, vesktop, zen-browser + extra? [y/N] " confirm
+read -lP "Would you like to install extra packages (steam, vesktop, zen-browser + extra)? [y/N] " confirm
 if string match -q --ignore-case "$confirm" "y"
     echo "installing packages..."
     paru -S vesktop-bin steam adwsteamgtk zen-browser-bin protonup-qt btop
