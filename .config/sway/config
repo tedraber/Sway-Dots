@@ -34,8 +34,8 @@ exec_always {
 
 # Keybind
   bindsym $mod+d exec $menu
-  bindsym $mod+e exec thunar
-  bindsym $mod+Shift+e exec foot -e yazi
+  bindsym $mod+Shift+e exec thunar
+  bindsym $mod+e exec foot -e yazi
   bindsym $mod+b exec $BROWSER
   bindsym $mod+l exec swaylock -C ~/.local/share/themes/rose-pine/swaylock/rose-pine
   bindsym $mod+q kill
