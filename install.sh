@@ -36,17 +36,17 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 # Clone swaylock theme
 echo "Copying swaylock theme..."
 mkdir -p ~/.local/share/themes/rose-pine
-git clone https://github.com/d218nis/rose-pine-swaylock.git ~/.local/share/themes/rose-pine/swaylock
+git clone https://github.com/d218nis/rose-pine-swaylock.git /home/$USER/.local/share/themes/rose-pine/swaylock
 
 # Clean existing configs
 echo "Cleaning old configurations..."
-rm -rf ~/.config/fastfetch ~/.config/fish ~/.config/foot ~/.config/sway ~/.config/swaync ~/.config/waybar ~/.config/wofi ~/.config/yazi 
+rm -rf /home/$USER/.config/fastfetch /home/$USER/.config/fish /home/$USER/.config/foot /home/$USER/.config/sway /home/$USER/.config/swaync /home/$USER/.config/waybar /home/$USER/.config/wofi /home/$USER/.config/yazi 
 
 # Move new configs
 echo "Applying new configurations..."
-cp -rv ~/Sway-Dots/.config/* ~/.config/
-mkdir -p ~/Pictures/Screenshots
-mv ~/Sway-Dots/bay.PNG ~/Pictures/Screenshots/
+cp -rv /home/$USER/Sway-Dots/.config/* /home/$USER/.config/
+mkdir -p /home/$USER/Pictures/Screenshots
+mv /home/$USER/Sway-Dots/bay.PNG /home/$USER/Pictures/Screenshots/
 
 # Completion message
 echo "Done."
