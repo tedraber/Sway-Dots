@@ -71,21 +71,21 @@ exec_always {
   bindsym $mod+Right focus right
 
   ## Navigate // Workspaces 1-10 // <> 0..9 ##
-  bindsym $mod+1 workspace $ws1
-  bindsym $mod+2 workspace $ws2
-  bindsym $mod+3 workspace $ws3
-  bindsym $mod+4 workspace $ws4
-  bindsym $mod+5 workspace $ws5
-  bindsym $mod+6 workspace $ws6
-  bindsym $mod+7 workspace $ws7
-  bindsym $mod+8 workspace $ws8
-  bindsym $mod+9 workspace $ws9
-  bindsym $mod+0 workspace $ws10
-  bindsym XF86Launch5 workspace $ws1
-  bindsym XF86Launch6 workspace $ws2
-  bindsym XF86Launch7 workspace $ws3
-  bindsym XF86Launch8 workspace $ws4
-  bindsym XF86Launch9 workspace $ws5
+  bindsym $mod+1 workspace 1
+  bindsym $mod+2 workspace 2
+  bindsym $mod+3 workspace 3
+  bindsym $mod+4 workspace 4
+  bindsym $mod+5 workspace 5
+  bindsym $mod+6 workspace 6
+  bindsym $mod+7 workspace 7
+  bindsym $mod+8 workspace 8
+  bindsym $mod+9 workspace 9
+  bindsym $mod+0 workspace 10
+  bindsym XF86Launch5 workspace 1
+  bindsym XF86Launch6 workspace 2
+  bindsym XF86Launch7 workspace 3
+  bindsym XF86Launch8 workspace 4
+  bindsym XF86Launch9 workspace 5
 #####
 # Window and Workspace Configuration
 #####
