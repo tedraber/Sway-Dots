@@ -33,10 +33,11 @@ gaps bottom 4
 
 # Auto-Start
 exec waybar
+exec swww-daemon
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user start sway-session.target
-exec_always oguri
+exec_always swww /home/$USER/Pictures/Wallpapers/bay.JPG center
 exec_always { 
   gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-moon-gtk"
   gsettings set org.gnome.desktop.interface icon-theme "rose-pine-moon-icons"
