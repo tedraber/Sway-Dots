@@ -2,7 +2,7 @@
 # Install packages with paru
 echo "Installing needed packages..."
 paru -Rns power-profiles-daemon --noconfirm 
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi btop
 
 # Try to detect an active display manager by checking systemd services
 set dm (systemctl list-units --type=service --state=running | grep -Ei 'gdm|sddm|lightdm|ly|lxdm|xdm' | awk '{print $1}' | sed 's/.service//')
@@ -27,14 +27,11 @@ end
 
 # Install extra packages
 echo "installing extra"
-paru -S --needed --noconfirm --overwrite vesktop
-paru -S --needed --noconfirm --overwrite zen-browser
-paru -S --needed --noconfirm --overwrite prismlauncher
-paru -S --needed --noconfirm --overwrite btop
-paru -S --needed --noconfirm --overwrite adwsteamgtk
-paru -S --needed --noconfirm --overwrite steam
-paru -S --needed --noconfirm --overwrite sober
-paru -S --needed --noconfirm --overwrite protonup-qt
+paru -S --needed vesktop ##discord
+paru -S --needed zen-browser ##web browser
+paru -S --needed prismlauncher ##minecraft
+paru -S --needed steam adwsteamgtk protonup-qt
+paru -S --needed sober ##roblox
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
