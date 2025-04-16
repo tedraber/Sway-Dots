@@ -18,8 +18,6 @@ while true; do
         echo "Skipping installation."
         break
     else
-        echo "Please answer y or n."
-    fi
 done
 
 echo "Settings up Audio..."
