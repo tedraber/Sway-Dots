@@ -1,7 +1,8 @@
 #!/usr/bin/fish
 # Install packages with paru
 echo "Installing needed packages..."
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlpui xorg-xwayland ly
+paru -Rns power-profiles-daemon
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly
 
 echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
