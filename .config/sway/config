@@ -58,9 +58,9 @@ exec_always {
   bindsym $mod+Return exec foot
   bindsym $mod+n exec swaync-client -t -sw
   bindsym $mod+g exec pavucontrol
-  bindsym $mod+End sway exitd+
+  bindsym $mod+End sway exit
   bindsym $mod+u exec tlpui
-
+  bindsym Ctrl+Shift+Escape exec foot -e btop
   #####
   # Window and Workspace Navigation
   #####
