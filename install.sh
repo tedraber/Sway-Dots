@@ -6,6 +6,30 @@ paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock sway
 echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
 
+# Check for current display manager and switch to Ly if needed
+if test -d /etc/systemd/system/display-manager.service
+    set current_dm (basename (readlink /etc/systemd/system/display-manager.service))
+    echo "Current display manager: $current_dm"
+    
+    if test "$current_dm" != "ly.service"
+        echo "Switching to Ly display manager..."
+        
+        # Disable current DM
+        sudo systemctl disable $current_dm --now
+        
+        # Enable Ly
+        sudo systemctl enable ly --now
+        
+        echo "Ly has been enabled as the display manager."
+    else
+        echo "Ly is already the display manager. No changes needed."
+    end
+else
+    echo "No display manager detected. Enabling Ly..."
+    sudo systemctl enable ly --now
+    echo "Ly has been enabled as the display manager."
+end
+
 # Install extra packages
 while true
     read -lP "Do you want to install extra files (recommended)? (y/n): " answer
