@@ -29,6 +29,7 @@ cp -rf ~/Sway-Dots/.config/* ~/.config/
 
 Then reboot your system
 ```
+you may have to then get a Rose Pine theme for KDE if you use and QT applications
 ## **Credits**
 Lots of thanks to the RosePine theme, using the waybar, and swaync theme :)) **https://rosepinetheme.com/**
 
