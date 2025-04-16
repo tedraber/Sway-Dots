@@ -7,27 +7,20 @@ echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
 
 
-# Detect current display manager
-set dm (loginctl show-session (loginctl | grep $(whoami) | awk '{print $1}') -p Type | cut -d= -f2)
+# Try to detect an active display manager by checking systemd services
+set dm (systemctl list-units --type=service --state=running | grep -Ei 'gdm|sddm|lightdm|ly|lxdm|xdm' | awk '{print $1}' | sed 's/.service//')
 
-# If a DM exists and is not 'ly', switch to 'ly'
 if test -n "$dm"
-    if test "$dm" != "tty"
-        echo "Detected Display Manager: $dm"
+    echo "Detected Display Manager: $dm"
 
-        if test "$dm" != "ly"
-            echo "Switching to ly..."
-            sudo systemctl disable $dm
-            sudo systemctl enable ly
-            sudo systemctl set-default graphical.target
-            echo "Ly has been enabled. Please reboot."
-        else
-            echo "Ly is already set as the display manager."
-        end
-    else
-        echo "No graphical display manager is active (TTY detected). Enabling ly..."
+    if test "$dm" != "ly"
+        echo "Switching to ly..."
+        sudo systemctl disable $dm
         sudo systemctl enable ly
         sudo systemctl set-default graphical.target
+        echo "Ly has been enabled. Please reboot."
+    else
+        echo "Ly is already set as the display manager."
     end
 else
     echo "No display manager detected. Enabling ly..."
