@@ -29,7 +29,7 @@ end
 
 # Install extra packages (auto-install without prompt)
 echo "Installing recommended extra files..."
-paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt
+paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt bibata-cursor-theme-bin
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
