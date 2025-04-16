@@ -27,22 +27,9 @@ else
     sudo systemctl set-default graphical.target
 end
 
-# Install extra packages
-while true
-    read -lP "Do you want to install extra files (recommended)? (y/n): " answer
-    set answer (string lower $answer)
-    
-    if test "$answer" = "y"
-        echo "Installing files..."
-        paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt
-        break
-    else if test "$answer" = "n"
-        echo "Skipping installation."
-        break
-    else
-        echo "Invalid input. Please answer y or n."
-    end
-end
+# Install extra packages (auto-install without prompt)
+echo "Installing recommended extra files..."
+paru -S --needed --noconfirm --overwrite vesktop-bin zen-browser prismlauncher btop steam adwsteamgtk protonup-qt
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
@@ -71,10 +58,4 @@ mv ~/Sway-Dots/bay.PNG ~/Pictures/Screenshots/
 
 # Completion message
 echo "Done."
-
-# Prompt for restart
-read -lP "Would you like to restart now? [y/N] " confirm
-if string match -q --ignore-case "$confirm" "y"
-    echo "Restarting system..."
-    reboot
-end
+echo "You may want to restart your system."
