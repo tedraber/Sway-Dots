@@ -3,7 +3,7 @@
 echo "Installing needed packages..."
 paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlpui xorg-xwayland fish ly 
 echo "cloning repo..."
-git clone https://github.com/linuxnoob235/Sway-Dots/install.sh
+git clone https://github.com/linuxnoob235/Sway-Dots/
 
 #install extra packages
 while true; do
