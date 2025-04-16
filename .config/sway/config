@@ -21,7 +21,9 @@ seat * xcursor_theme Bibata-Modern-Ice
 
 # Auto-Start
 exec waybar
-exec --no-startup-id pulseaudio --start
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec systemctl --user start sway-session.target
 exec swaybg -i ~/Pictures/Wallapers/bay.PNG
 exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-moon-gtk"
