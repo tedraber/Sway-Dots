@@ -10,6 +10,18 @@ default_floating_border none
 titlebar_padding 1
 titlebar_border_thickness 0
 seat * xcursor_theme Bibata-Modern-Ice
+
+#Visuals
+# Gaps Between Containers
+gaps inner 8
+gaps outer 4
+
+# Gaps between screen edges
+gaps left 4
+gaps right 4
+gaps top 4
+gaps bottom 4
+
 # Variables
   set $mod Mod4
   set $alt Mod1
@@ -24,7 +36,7 @@ exec waybar
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user start sway-session.target
-exec swaybg -i ~/Pictures/Wallapers/bay.PNG
+exec swaybg -i ~/Pictures/Wallapers/bay.JPG
 exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-moon-gtk"
   gsettings set org.gnome.desktop.interface icon-theme "rose-pine-moon-icons"
@@ -230,28 +242,17 @@ input type:touchpad {
 }
 
 input "1:1:AT_Translated_Set_2_keyboard" {
-        xkb_layout de
+        xkb_layout us
 }
 
 input "1133:45081:MX_Master_2S_Mouse" {
         natural_scroll enabled
 }
 #input * {
-#        xkb_layout de
+#        xkb_layout us
 #        xkb_numlock enable
 #	natural_scroll enabled
 #}
-
-#Visuals
-# Gaps Between Containers
-gaps inner 8
-gaps outer 0
-
-# Gaps between screen edges
-gaps left 4
-gaps right 4
-gaps top 4
-gaps bottom 4
 
 # Create only gaps if more then one container
 smart_gaps on
