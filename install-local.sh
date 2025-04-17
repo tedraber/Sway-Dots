@@ -27,10 +27,10 @@ end
 
 # Install extra packages
 echo "installing extra"
-paru -S --needed vesktop ##discord
-paru -S --needed zen-browser ##web browser
-paru -S --needed prismlauncher ##minecraft
-paru -S --needed steam adwsteamgtk protonup-qt
+paru -S --needed --noconfirm vesktop ##discord
+paru -S --needed --noconfirm zen-browser ##web browser
+paru -S --needed --noconfirm prismlauncher ##minecraft
+paru -S --needed --noconfirm steam adwsteamgtk protonup-qt
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
