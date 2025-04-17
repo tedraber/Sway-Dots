@@ -155,11 +155,11 @@ bindsym Shift+$alt+s exec wl-paste | xclip -selection clipboard | notify-send "P
 
 ## Modify // Monitor brightness up // <XF86MonBrightnessUp> ##
 #bindsym XF86MonBrightnessUp exec light -A 10
-bindsym --locked XF86MonBrightnessUp exec lightctl raise
+bindsym --locked XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
 
 ## Modify // Monitor brightness down // <XF86MonBrightnessDown> ##
 #bindsym XF86MonBrightnessDown exec light -U 10
-bindsym --locked XF86MonBrightnessDown exec lightctl lower
+bindsym --locked XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
 # Modify // Keyboard brightness up // <XF86KbdBrightnessUp> ##
 #bindsym --locked XF86KbdBrightnessUp
