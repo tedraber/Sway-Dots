@@ -2,7 +2,7 @@
 # Install packages with paru
 echo "Installing needed packages..."
 paru -Rns power-profiles-daemon --noconfirm 
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi btop
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi btop brightnessctl
 
 # Try to detect an active display manager by checking systemd services
 set dm (systemctl list-units --type=service --state=running | grep -Ei 'gdm|sddm|lightdm|ly|lxdm|xdm' | awk '{print $1}' | sed 's/.service//')
@@ -31,7 +31,6 @@ paru -S --needed vesktop ##discord
 paru -S --needed zen-browser ##web browser
 paru -S --needed prismlauncher ##minecraft
 paru -S --needed steam adwsteamgtk protonup-qt
-paru -S --needed sober ##roblox
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
