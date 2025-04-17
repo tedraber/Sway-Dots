@@ -57,7 +57,7 @@ exec_always {
   bindsym $mod+c kill
   bindsym $mod+Return exec foot
   bindsym $mod+n exec swaync-client -t -sw
-  bindsym $mod+g exec pavucontrol
+  bindsym $mod+g exec GTK_THEME=Adwaita pavucontrol
   bindsym $mod+End sway exit
   bindsym $mod+u exec tlpui
   bindsym Ctrl+Shift+Escape exec foot -e btop
@@ -154,11 +154,9 @@ bindsym $mod+a focus parent
 bindsym Shift+$alt+s exec wl-paste | xclip -selection clipboard | notify-send "PRIMARY Clipboard synced with Wayland"
 
 ## Modify // Monitor brightness up // <XF86MonBrightnessUp> ##
-#bindsym XF86MonBrightnessUp exec light -A 10
 bindsym --locked XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
 
 ## Modify // Monitor brightness down // <XF86MonBrightnessDown> ##
-#bindsym XF86MonBrightnessDown exec light -U 10
 bindsym --locked XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 
 # Modify // Keyboard brightness up // <XF86KbdBrightnessUp> ##
@@ -171,17 +169,9 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +10%
 bindsym --locked XF86AudioRaiseVolume exec volumectl raise
 
-## Modify // Volume down // <XF86AudioLowerVolume> ##
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -10%
-bindsym --locked XF86AudioLowerVolume exec volumectl lower
-
-## Modify // Volume mute // <XF86AudioMute> ##
-#bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
-bindsym --locked XF86AudioMute exec volumectl toggle-mute
-
-## Modify // Mic mute // <XF86AudioMicMute> ##
-#bindsym --locked XF86AudioMicMute exec amixer -D pulse sset Capture toggle && notify-send -t 1000 "Microphone state toggled"
-bindsym --locked XF86AudioMicMute exec volumectl -m toggle-mute
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec Pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ## Modify // Play-Pause // <XF86AudioPlay> ##
 bindsym --locked XF86AudioPlay exec playerctl play-pause
