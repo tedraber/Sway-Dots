@@ -57,8 +57,8 @@ rm -rf ~/.config/fastfetch ~/.config/fish ~/.config/foot ~/.config/sway ~/.confi
 # Move new configs
 echo "Applying new configurations..."
 cp -rv ~/Sway-Dots/.config/* ~/.config/
-mkdir -p ~/Pictures/Screenshots
-mv ~/Sway-Dots/bay.JPG ~/Pictures/Screenshots/
+mkdir -p /home/$USER/Pictures/Wallpapers
+cp ~/Sway-Dots/Wallpapers/* ~/Pictures/Wallpapers/
 
 # Completion message
 echo "Done."
