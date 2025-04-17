@@ -30,11 +30,11 @@ end
 
 # Install extra packages (auto-install without prompt)
 echo "Installing recommended extra files..."
-paru -S --needed vesktop ##discord
-paru -S --needed zen-browser ##web browser
-paru -S --needed prismlauncher ##minecraft
-paru -S --needed steam adwsteamgtk protonup-qt
-paru -S --noconfirm bibata-cursor-theme-bin
+paru -S --needed --noconfirm vesktop ##discord
+paru -S --needed --noconfirm zen-browser ##web browser
+paru -S --needed --noconfirm prismlauncher ##minecraft
+paru -S --needed --noconfirm steam adwsteamgtk protonup-qt
+paru -S --noconfirm --noconfirm bibata-cursor-theme-bin
 
 echo "Setting up Audio..."
 systemctl --user enable pipewire pipewire-pulse wireplumber
