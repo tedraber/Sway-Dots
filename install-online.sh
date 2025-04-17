@@ -2,7 +2,7 @@
 # Install packages with paru
 echo "Installing needed packages..."
 paru -Rns power-profiles-daemon
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly brightnessctl
 
 echo "Cloning repo..."
 git clone https://github.com/linuxnoob235/Sway-Dots/
@@ -34,7 +34,6 @@ paru -S --needed vesktop ##discord
 paru -S --needed zen-browser ##web browser
 paru -S --needed prismlauncher ##minecraft
 paru -S --needed steam adwsteamgtk protonup-qt
-paru -S --needed sober ##roblox
 paru -S --noconfirm bibata-cursor-theme-bin
 
 echo "Setting up Audio..."
