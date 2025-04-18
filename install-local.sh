@@ -2,7 +2,7 @@
 # Install packages with paru
 echo "Installing needed packages..."
 paru -Rns power-profiles-daemon --noconfirm 
-paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber tlp tlpui xorg-xwayland swww-git ly acpi btop brightnessctl pactl
+paru -S --needed --noconfirm fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber 7zip tlp tlpui xorg-xwayland swww-git ly acpi btop brightnessctl pactl
 
 # Try to detect an active display manager by checking systemd services
 set dm (systemctl list-units --type=service --state=running | grep -Ei 'gdm|sddm|lightdm|ly|lxdm|xdm' | awk '{print $1}' | sed 's/.service//')
