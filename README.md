@@ -17,11 +17,11 @@ makepkg -si
 
 //have multi-lib enabled
 ```
-Install through curl (recommended)
+Install through curl
 ``` 
 fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install-online.sh | fish"
 ```
-OR Install through git
+OR Install through git (recommended)
 ``` 
 git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
 chmod +x install-local.sh && ./install-local.sh
