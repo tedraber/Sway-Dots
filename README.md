@@ -6,16 +6,20 @@ My new Sway dotfiles I put together
 ## How to install:
 On a fresh Arch Insall, prereqs:
 ```
-//set shell to fish
+# set shell to fish
 sudo pacman -S fish && chsh -s /usr/bin/fish
 
-//install paru
+# install paru
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
-//have multi-lib enabled
+
+# or if your on EndeavourOS 
+yay -S paru
+
+# have multi-lib enabled
 ```
 Install through curl
 ``` 
@@ -32,20 +36,20 @@ git clone https://github.com/linuxnoob235/Sway-Dots.git
 paru -Rns power-profiles-daemon 
 paru -S --needed fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly
 
-//Set up PieWire
+$ Set up PipeWire
 systemctl --user enable pipewire pipewire-pulse wireplumber
-//Set GTK theme
+# Set GTK theme
 gsettings set org.gnome.desktop.interface gtk-theme 'rose-pine-moon-gtk'
 gsettings set org.gnome.desktop.interface icon-theme 'oomox-rose-pine-moon'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
-//Install swaylock
+# Install swaylock
 git clone https://github.com/d218nis/rose-pine-swaylock.git ~/.local/share/themes/rose-pine/swaylock
 
-//Remove existing config
+#Remove existing config
 rm -rf ~/.config/fastfetch ~/.config/fish ~/.config/foot ~/.config/sway ~/.config/swaync ~/.config/waybar ~/.config/wofi ~/.config/yazi
 
-//Copy config files
+# Copy config files
 cp -rf ~/Sway-Dots/.config/* ~/.config/
 mkdir ~/Pictures/Wallpapers/  ## if neccessary
 cp -f ~/Sway-Dots/Wallpapers/* ~/Pictures/Wallpapers/ 
