@@ -23,16 +23,16 @@ yay -S paru
 ```
 Install through curl
 ``` 
-fish -c "curl -fsSL https://raw.githubusercontent.com/linuxnoob235/Sway-Dots/main/install-online.sh | fish"
+fish -c "curl -fsSL https://raw.githubusercontent.com/tedraber/Sway-Dots/main/install-online.sh | fish"
 ```
 OR Install through git (recommended)
 ``` 
-git clone https://github.com/linuxnoob235/Sway-Dots.git & cd Sway-Dots 
+git clone https://github.com/tedraber/Sway-Dots.git & cd Sway-Dots 
 chmod +x install-local.sh && ./install-local.sh
 ```
 ### OR do it manually
 ```
-git clone https://github.com/linuxnoob235/Sway-Dots.git
+git clone https://github.com/tedraber/Sway-Dots.git
 paru -Rns power-profiles-daemon 
 paru -S --needed fastfetch grim slurp foot sway waybar swaylock swaync wofi yazi thunar grimshot nwg-look micro imv pipewire pipewire-pulse wireplumber swww tlp tlpui xorg-xwayland ly
 
